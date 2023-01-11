@@ -7,6 +7,8 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SergioComponent } from './teste/sergio/sergio.component';
 import { ParentDataComponent } from './components/parent-data/parent-data.component';
 import { DirectiviesComponent } from './components/directivies/directivies.component';
+import { ComponentsEventosComponent } from './components-eventos/components-eventos.component';
+import { IfRenderComponent } from './components/if-render/if-render.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { DirectiviesComponent } from './components/directivies/directivies.compo
     FirstComponentComponent,
     SergioComponent,
     ParentDataComponent,
-    DirectiviesComponent
+    DirectiviesComponent,
+    ComponentsEventosComponent,
+    IfRenderComponent
   ],
   imports: [
     BrowserModule,
