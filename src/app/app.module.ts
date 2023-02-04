@@ -9,6 +9,7 @@ import { ParentDataComponent } from './components/parent-data/parent-data.compon
 import { DirectiviesComponent } from './components/directivies/directivies.component';
 import { ComponentsEventosComponent } from './components-eventos/components-eventos.component';
 import { IfRenderComponent } from './components/if-render/if-render.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
     ParentDataComponent,
     DirectiviesComponent,
     ComponentsEventosComponent,
-    IfRenderComponent
+    IfRenderComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,

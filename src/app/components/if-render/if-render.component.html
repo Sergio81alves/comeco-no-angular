@@ -1,3 +1,14 @@
-<div class="class">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem praesentium saepe animi odit!
+<div class="class" >
+    <div *ngIf="canShow">
+        Estou mostrando isso pq fui permitido
+    </div>
+
+    <p *ngIf="nome === 'Sergio'; else nomeNotFound"> Olá {{nome}} prazer em ter vc aqui</p>
+
+    <ng-template #nomeNotFound>
+        <div>
+            <h2>Nome não foi encontrado</h2>
+        </div>
+
+    </ng-template>
 </div>
