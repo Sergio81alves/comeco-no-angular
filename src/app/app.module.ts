@@ -10,6 +10,8 @@ import { DirectiviesComponent } from './components/directivies/directivies.compo
 import { ComponentsEventosComponent } from './components-eventos/components-eventos.component';
 import { IfRenderComponent } from './components/if-render/if-render.component';
 import { EventosComponent } from './components/eventos/eventos.component';
+import { EmitterComponent } from './components/emitter/emitter.component';
+import { ChangeNumberComponent } from './components/change-number/change-number.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EventosComponent } from './components/eventos/eventos.component';
     DirectiviesComponent,
     ComponentsEventosComponent,
     IfRenderComponent,
-    EventosComponent
+    EventosComponent,
+    EmitterComponent,
+    ChangeNumberComponent
   ],
   imports: [
     BrowserModule,
