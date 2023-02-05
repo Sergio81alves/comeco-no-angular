@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-change-number',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./change-number.component.css']
 })
 export class ChangeNumberComponent implements OnInit {
+@Output() changeNumber: EventEmitter<any> = new EventEmitter();
+
+  handleClick(){
+    this.changeNumber.emit();
+  }
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+ 
 }

@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emitter.component.css']
 })
 export class EmitterComponent implements OnInit {
+  myNumber = 0;
 
+  onChangeNumber(){
+    this.myNumber = Math.floor(Math.random()* 10)
+  }
   constructor() { }
 
   ngOnInit(): void {
