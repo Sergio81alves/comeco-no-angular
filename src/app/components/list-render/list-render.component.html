@@ -1,6 +1,11 @@
 <div class="class">
     <ul>
-        <li *ngFor="let animal of animais"> Nome: {{animal.nome}}, tipo: {{animal.tipo}}</li>
+        <li *ngFor="let animal of animais"> Nome: {{animal.nome}} -  tipo: {{animal.tipo}}</li>
     </ul>
 
+    <ul>
+        <li *ngFor="let produto of produtos">
+            Nome: {{produto.name}} - Quantidade: {{produto.ml}} - Qual tarja: {{produto.tarja}} - Valor {{produto.preco | currency: "BRL"}}
+        </li>
+    </ul>
 </div>
