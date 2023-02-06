@@ -13,7 +13,7 @@ export class EmitterComponent implements OnInit {
     this.myNumber = Math.floor(Math.random()* 3)
   }
   onHadRat(){
-    this.myNumber = Math.floor(Math.random()* 3)
+    this.myNumber = Math.floor(Math.random()* 2)
     console.log(this.myNumber)
     this.newName = this.newName
   }
