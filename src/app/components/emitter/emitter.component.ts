@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmitterComponent implements OnInit {
   myNumber = 0;
-  newName = ''
+  newName = 'Sergio'
 
   onChangeNumber(){
-    this.myNumber = Math.floor(Math.random()* 10)
+    this.myNumber = Math.floor(Math.random()* 3)
   }
   onHadRat(){
-    console.log('Deu certo! ')
-    this.newName = 'Sergio'
+    this.myNumber = Math.floor(Math.random()* 3)
+    console.log(this.myNumber)
+    this.newName = this.newName
   }
   constructor() { }
 

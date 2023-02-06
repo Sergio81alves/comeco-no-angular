@@ -2,6 +2,10 @@
     <h1>O Número é {{myNumber}}</h1>
     <app-change-number (changeNumber)="onChangeNumber()"></app-change-number>
 
-    <h2>O nome é {{newName}}</h2>
-    <app-if-render (hadRat)="onHadRat()"></app-if-render>
+    <h2 *ngIf="myNumber == 0; else notName ">Olá, {{newName}}</h2>
+
+    <ng-template #notName>
+        <h2>Chama o Sergio pfv</h2>
+    </ng-template>
+    <app-if-render (changeNumber)="onChangeNumber()" (hadRat)="onHadRat()"></app-if-render>
 </div>
