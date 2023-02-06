@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-if-render',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IfRenderComponent implements OnInit {
   canShow = true;
-  nome = 'Sergi'
+  nome = 'Sergi';
+  nome2 = '';
+
+  @Output() hadRat: EventEmitter<any> = new EventEmitter();
+
+  trocarNome(){
+    this.hadRat.emit();
+    this.nome2 = "Sergio"
+  }
 
   constructor() { }
 
