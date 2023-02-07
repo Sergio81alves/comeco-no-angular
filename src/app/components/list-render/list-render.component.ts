@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
-
+import { Produtos } from 'src/app/Produtos';
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -19,13 +19,18 @@ export class ListRenderComponent implements OnInit {
     tipo: 'Dragão', 
     age: 10,
   }
-  produtos = [
+  produtos: Produtos[] = [
     {name: "Dipirona", ml: "20ml", tarja: "Branca", preco: "15"},
     {name: "Novalgina", ml: "15ml", tarja: "Branca", preco: "16"},
     {name: "Paracetamol", ml: "25ml", tarja: "Branca", preco: "20"},
     {name: "Decadrom", ml: "20ml", tarja: "Preta", preco: "45"},
     {name: "defratr", ml: "10ml", tarja: "vermelha", preco: "100"},
   ]
+
+  mostPreco = ''
+  showPreco(produtos: Produtos){
+    this.mostPreco = `O valor do ${produtos.name} é R$${produtos.preco } Reais`
+  }
   ngOnInit(): void {
   }
 

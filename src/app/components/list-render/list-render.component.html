@@ -9,8 +9,9 @@
     <ul>
         <li *ngFor="let produto of produtos">
             Nome: {{produto.name}} - Quantidade: {{produto.ml}} - Qual tarja: {{produto.tarja}} - Valor {{produto.preco | currency: "BRL"}}
-           
+           <button (click)="showPreco(produto)">Show preço</button>
         </li>
     </ul>
+    <h1> {{mostPreco}} </h1>
     
 </div>
