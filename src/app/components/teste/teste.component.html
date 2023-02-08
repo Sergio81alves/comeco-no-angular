@@ -1,0 +1,9 @@
+
+<div class="class">
+    <ul>
+        <li *ngFor="let cliente of Clientes">Nome do Cliente {{cliente.nome}} com {{cliente.idade}} 
+            <button (click)="mostrarPeso(cliente)">mostrar peso</button>
+        </li>
+    </ul>
+    <h3>{{this.showPeso}}</h3>
+</div>
