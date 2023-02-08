@@ -1,1 +1,9 @@
-<p>two-way works!</p>
+<div class="class">
+    <h2>two way data binding</h2>
+    <form>
+        <input type="text" [(ngModel)]="nome" name="name"
+        placeholder="Digite seu nome">
+        <input type="submit" value="Enviar">
+    </form>
+    <p *ngIf="nome != '' ">O nome é {{nome}} </p>
+</div>

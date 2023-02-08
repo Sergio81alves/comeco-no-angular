@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayComponent implements OnInit {
 
+  nome: string = "";
   constructor() { }
 
   ngOnInit(): void {
