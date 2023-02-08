@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
 import { Produtos } from 'src/app/Produtos';
