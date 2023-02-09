@@ -2,12 +2,19 @@ import { UpperCasePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
 import { Produtos } from 'src/app/Produtos';
+import { ListService } from 'src/app/services/list.service';
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent implements OnInit {
+
+  constructor(private listServe: ListService){
+
+  }
+
   animais: Animal[]=  [
     {nome: 'bob', tipo: 'Dog', age: 22},
     {nome: 'felipe', tipo: 'hourse', age: 2},
@@ -38,5 +45,10 @@ export class ListRenderComponent implements OnInit {
   animalDetails = ''
   showAge(animais: Animal){
     this.animalDetails = `O pet ${animais.nome} tem ${animais.age} Anos`
+  }
+
+  remopvendoAnimal(animal: Animal){
+    console.log("Excluindo Animal")
+    this.animais = this.listServe.remove(this.animais, animal)
   }
 }
