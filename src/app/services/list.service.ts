@@ -16,4 +16,8 @@ export class ListService {
   remover(produtos: Produtos[], produto: Produtos){
     return produtos.filter((b) => produto.name !== b.name )
   }
+
+  numeroDaSorte(){
+    
+  }
 }

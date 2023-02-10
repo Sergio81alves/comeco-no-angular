@@ -4,6 +4,7 @@ import { Animal } from 'src/app/Animal';
 import { Produtos } from 'src/app/Produtos';
 import { ListService } from 'src/app/services/list.service';
 
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -11,7 +12,7 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
 
-  constructor(private listServe: ListService){
+  constructor(private listService: ListService){
 
   }
 
@@ -40,7 +41,7 @@ export class ListRenderComponent implements OnInit {
     this.mostPreco = `O valor do ${produtos.name} é R$${produtos.preco } Reais`
   }
   excluindoProduto(produtos: Produtos){
-    this.produtos = this.listServe.remover(this.produtos, produtos)
+    this.produtos = this.listService.remover(this.produtos, produtos)
   }
 
   ngOnInit(): void {
@@ -53,6 +54,6 @@ export class ListRenderComponent implements OnInit {
 
   remopvendoAnimal(animal: Animal){
     /*essa função recebe o animal, depois vai lá em lista serviço e usa a função de remover, que por sua vez só faz um filtro retornando os outros itens menos o selecionado */
-    this.animais = this.listServe.remove(this.animais, animal)
+    this.animais = this.listService.remove(this.animais, animal)
   }
 }
