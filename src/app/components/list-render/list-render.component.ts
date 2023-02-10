@@ -39,6 +39,10 @@ export class ListRenderComponent implements OnInit {
   showPreco(produtos: Produtos){
     this.mostPreco = `O valor do ${produtos.name} é R$${produtos.preco } Reais`
   }
+  excluindoProduto(produtos: Produtos){
+    this.produtos = this.listServe.remover(this.produtos, produtos)
+  }
+
   ngOnInit(): void {
   }
 
@@ -48,7 +52,7 @@ export class ListRenderComponent implements OnInit {
   }
 
   remopvendoAnimal(animal: Animal){
-    console.log("Excluindo Animal")
+    /*essa função recebe o animal, depois vai lá em lista serviço e usa a função de remover, que por sua vez só faz um filtro retornando os outros itens menos o selecionado */
     this.animais = this.listServe.remove(this.animais, animal)
   }
 }
