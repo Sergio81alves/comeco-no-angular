@@ -13,15 +13,12 @@ import { ListService } from 'src/app/services/list.service';
 export class ListRenderComponent implements OnInit {
 
   constructor(private listService: ListService){
-
+    //faco primeiro essa função depois chamo ela lá em baixo.
+    //chamo ela no meu constructor para construir no momento do site
+    this.getAnimals()
   }
 
-  animais: Animal[]=  [
-    {nome: 'bob', tipo: 'Dog', age: 22},
-    {nome: 'felipe', tipo: 'hourse', age: 2},
-    {nome: 'check', tipo: 'cat', age: 3},
-    {nome: 'marcia', tipo: 'Dog"a"', age: 4},
-  ]
+  animais: Animal[]=  [];
 
   animal: Animal =  {
     nome: 'teste', 
@@ -55,5 +52,11 @@ export class ListRenderComponent implements OnInit {
   remopvendoAnimal(animal: Animal){
     /*essa função recebe o animal, depois vai lá em lista serviço e usa a função de remover, que por sua vez só faz um filtro retornando os outros itens menos o selecionado */
     this.animais = this.listService.remove(this.animais, animal)
+  }
+  //função que pega os animais do banco de dados
+  getAnimals(): void{
+    //esse cara (getAll) eu vou ter que ter la no servidor para pegar
+    this.listService.getAll().subscribe((animals) => this.animais = animals);
+    //subscribe fica esperando o evento ser concretizado
   }
 }
