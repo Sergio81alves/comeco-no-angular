@@ -22,5 +22,6 @@ animal?: Animal;
   //apartir desse cara eu vou puxar o dado da rota
   getAnimal(){
     const id = Number(this.route.snapshot.paramMap.get('id'))
+    this.listService.getItam(id).subscribe((animal) => (this.animal = animal))
   }
 }
