@@ -20,12 +20,6 @@ export class ListRenderComponent implements OnInit {
 
   animais: Animal[]=  [];
 
-  animal: Animal =  {
-    id: 2554,
-    nome: 'teste', 
-    tipo: 'Dragão', 
-    age: 10,
-  }
   produtos: Produtos[] = [
     {name: "Dipirona", ml: "20ml", tarja: "Branca", preco: "15"},
     {name: "Novalgina", ml: "15ml", tarja: "Branca", preco: "16"},
