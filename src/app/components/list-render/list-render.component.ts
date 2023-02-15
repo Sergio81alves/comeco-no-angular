@@ -21,6 +21,7 @@ export class ListRenderComponent implements OnInit {
   animais: Animal[]=  [];
 
   animal: Animal =  {
+    id: 2554,
     nome: 'teste', 
     tipo: 'Dragão', 
     age: 10,

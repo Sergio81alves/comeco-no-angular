@@ -18,6 +18,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { TesteComponent } from './components/teste/teste.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayComponent } from './components/two-way/two-way.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TwoWayComponent } from './components/two-way/two-way.component';
     ListRenderComponent,
     TesteComponent,
     PipesComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
