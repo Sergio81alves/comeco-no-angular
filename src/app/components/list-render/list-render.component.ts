@@ -11,7 +11,7 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent implements OnInit {
-
+  animal?: Animal;
   constructor(private listService: ListService){
     //faco primeiro essa função depois chamo ela lá em baixo.
     //chamo ela no meu constructor para construir no momento do site
@@ -38,6 +38,7 @@ export class ListRenderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
   animalDetails = ''
   showAge(animais: Animal){

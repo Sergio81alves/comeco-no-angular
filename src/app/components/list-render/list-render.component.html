@@ -1,11 +1,15 @@
 <div class="class">
     <ul>
-        <li *ngFor="let animal of animais"> Nome: <a routerLink="/list/{{animal.id}}">{{animal.nome}}</a> -  tipo: {{animal.tipo}}
+        <li *ngFor="let animal of animais"> Nome: <a routerLink="/list/{{ animal.id }}"> {{animal.nome}} </a> -  tipo: {{animal.tipo}}
          <button (click)="showAge(animal)">Show age</button>
          <button (click)="remopvendoAnimal(animal)" >Excluindo</button>
         </li>
     </ul>
     <h3>{{animalDetails}}</h3>
+
+    <div *ngIf="animal" class="class">
+        <h2>Id: {{animal.id}}</h2>
+    </div>
 
     <ul>
         <li *ngFor="let produto of produtos">

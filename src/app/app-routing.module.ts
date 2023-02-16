@@ -12,11 +12,12 @@ import { TwoWayComponent } from './components/two-way/two-way.component';
 const routes: Routes = [
   {path: "", component: FirstComponentComponent},
   {path: "list", component: ListRenderComponent},
+  {path: "list/:id", component: ItemDetailComponent},
   {path: "emiter", component: EmitterComponent},
   {path: "two", component: TwoWayComponent},
   {path: "eventos", component: EventosComponent},
   {path: "if", component: IfRenderComponent},
-  {path: "list/:id", component: ItemDetailComponent},
+  
 ];
 
 @NgModule({
