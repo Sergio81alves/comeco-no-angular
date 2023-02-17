@@ -15,11 +15,19 @@
         <li *ngFor="let produto of produtos">
             Nome: {{produto.name}} - Quantidade: {{produto.ml}} - Qual tarja: {{produto.tarja}} - Valor {{produto.preco | currency: "BRL"}}
            <button (click)="showPreco(produto)">Show preço</button>
-           <button (click)="excluindoProduto(produto)">Excluir</button>
+           <button (click)="removendoProduto(produto)">Adicionar</button>
         </li>
     </ul>
     <h1> {{mostPreco}} </h1>
 
-    
+    <form action="" method="post">
+        <input type="number" [(ngModel)]="id" name="id" placeholder="Id">
+        <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome">
+        <input type="text" [(ngModel)]="tipo" name="tipo" placeholder="Tipo">
+        <input type="text" [(ngModel)]="age" name="age" placeholder="Age">
+        <button type="submit" (click)="incluirUsuario()">
+            Cadastrar
+        </button>
+    </form>
     
 </div>

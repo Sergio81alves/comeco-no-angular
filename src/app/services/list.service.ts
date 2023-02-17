@@ -11,14 +11,19 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 })
 export class ListService {
   //private só fica acessivel na class, não fica acessivel no component, isso é uma boa pratica para url por exemplo
-  private apiUrl = 'http://localhost:3000/animais'
+  private apiUrl = 'http://localhost:3000/animais';
+
   constructor(private http: HttpClient) { }
   remove(animais: Animal[], animal: Animal){
-    return animais.filter((a) => animal.nome !== a.nome);
+    return animais.splice( animais.indexOf(animal))
   }
 
-  remover(produtos: Produtos[], produto: Produtos){
+  excluir(produtos: Produtos[], produto: Produtos){
     return produtos.filter((b) => produto.name !== b.name )
+  }
+
+  adiciona(animais: Animal[]){
+
   }
 
   numeroDaSorte(){

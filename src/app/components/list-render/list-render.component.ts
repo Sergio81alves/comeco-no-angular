@@ -1,5 +1,5 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
 import { Produtos } from 'src/app/Produtos';
 import { ListService } from 'src/app/services/list.service';
@@ -12,6 +12,11 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
   animal?: Animal;
+
+  id = "";
+  nome = '';
+  tipo = '';
+  age = '';
   constructor(private listService: ListService){
     //faco primeiro essa função depois chamo ela lá em baixo.
     //chamo ela no meu constructor para construir no momento do site
@@ -32,9 +37,15 @@ export class ListRenderComponent implements OnInit {
   showPreco(produtos: Produtos){
     this.mostPreco = `O valor do ${produtos.name} é R$${produtos.preco } Reais`
   }
-  excluindoProduto(produtos: Produtos){
-    this.produtos = this.listService.remover(this.produtos, produtos)
+  removendoProduto(produtos: Produtos){
+    this.produtos = this.listService.excluir(this.produtos, produtos)
   }
+
+  incluirUsuario(/*animal: Animal*/) {
+    /*this.animais = this.listService.adiciona(this.animais, animal)
+   return console.log("adicionou ")*/
+  }
+
 
   ngOnInit(): void {
   }
