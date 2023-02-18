@@ -41,7 +41,7 @@ export class ListRenderComponent implements OnInit {
     this.produtos = this.listService.excluir(this.produtos, produtos)
   }
 
-  incluirUsuario(/*animal: Animal*/) {
+  incluirAnimal(/*animal: Animal*/) {
     /*this.animais = this.listService.adiciona(this.animais, animal)
    return console.log("adicionou ")*/
   }

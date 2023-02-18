@@ -12,7 +12,7 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 export class ListService {
   //private só fica acessivel na class, não fica acessivel no component, isso é uma boa pratica para url por exemplo
   private apiUrl = 'http://localhost:3000/animais';
-
+ 
   constructor(private http: HttpClient) { }
   remove(animais: Animal[], animal: Animal){
     return animais.splice( animais.indexOf(animal))
@@ -26,9 +26,7 @@ export class ListService {
 
   }
 
-  numeroDaSorte(){
-    
-  }
+  
 /*antes de usar essa função tem que importar funções do angular httpHeaders e httpClient */
   getAll(): Observable<Animal[]>{
     return this.http.get<Animal[]>(this.apiUrl)
