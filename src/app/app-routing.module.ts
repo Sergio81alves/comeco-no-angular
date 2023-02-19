@@ -7,6 +7,7 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { TwoWayComponent } from './components/two-way/two-way.component';
+import { SergioComponent } from './teste/sergio/sergio.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: "two", component: TwoWayComponent},
   {path: "eventos", component: EventosComponent},
   {path: "if", component: IfRenderComponent},
+  {path: "sergio", component: SergioComponent},
   
 ];
 

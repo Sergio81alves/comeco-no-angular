@@ -29,5 +29,14 @@
             Cadastrar
         </button>
     </form>
+
+    <input type="text" [(ngModel)]=" mostrarItem">
+    <ul>
+        <li *ngFor="let item of items ">
+            {{item}}
+        </li>
+        <button (click)="enviar()">Dastrar</button>
+    </ul>
+    {{ mostrarItem}}
     
 </div>

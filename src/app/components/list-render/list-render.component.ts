@@ -13,10 +13,18 @@ import { ListService } from 'src/app/services/list.service';
 export class ListRenderComponent implements OnInit {
   animal?: Animal;
 
-  id = "";
+  id = parseFloat;
   nome = '';
   tipo = '';
   age = '';
+
+
+  mostrarItem = "";
+  items = ['joão', 'pedro', 'victor'];
+
+  enviar(){
+    this.items.push(this.mostrarItem)
+  }
   constructor(private listService: ListService){
     //faco primeiro essa função depois chamo ela lá em baixo.
     //chamo ela no meu constructor para construir no momento do site
@@ -41,9 +49,8 @@ export class ListRenderComponent implements OnInit {
     this.produtos = this.listService.excluir(this.produtos, produtos)
   }
 
-  incluirAnimal(/*animal: Animal*/) {
-    /*this.animais = this.listService.adiciona(this.animais, animal)
-   return console.log("adicionou ")*/
+  incluirAnimal() {
+    
   }
 
 
