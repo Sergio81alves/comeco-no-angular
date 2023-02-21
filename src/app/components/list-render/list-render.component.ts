@@ -12,6 +12,7 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
   animal?: Animal;
+  produto?: Produtos;
 
   id = parseFloat;
   nome = '';
@@ -29,17 +30,12 @@ export class ListRenderComponent implements OnInit {
     //faco primeiro essa função depois chamo ela lá em baixo.
     //chamo ela no meu constructor para construir no momento do site
     this.getAnimals()
+    this.getProdutos()
   }
 
   animais: Animal[]=  [];
 
-  produtos: Produtos[] = [
-    {name: "Dipirona", ml: "20ml", tarja: "Branca", preco: "15"},
-    {name: "Novalgina", ml: "15ml", tarja: "Branca", preco: "16"},
-    {name: "Paracetamol", ml: "25ml", tarja: "Branca", preco: "20"},
-    {name: "Decadrom", ml: "20ml", tarja: "Preta", preco: "45"},
-    {name: "defratr", ml: "10ml", tarja: "vermelha", preco: "100"},
-  ]
+  produtos: Produtos[] = [];
 
   mostPreco = ''
   showPreco(produtos: Produtos){
@@ -47,10 +43,6 @@ export class ListRenderComponent implements OnInit {
   }
   removendoProduto(produtos: Produtos){
     this.produtos = this.listService.excluir(this.produtos, produtos)
-  }
-
-  incluirAnimal() {
-    
   }
 
 
@@ -72,5 +64,9 @@ export class ListRenderComponent implements OnInit {
     //esse cara (getAll) eu vou ter que ter la no servidor para pegar
     this.listService.getAll().subscribe((animals) => this.animais = animals);
     //subscribe fica esperando o evento ser concretizado
+  }
+
+  getProdutos(): void{
+    this.listService.pegarTudo().subscribe((produtos) => this.produtos = produtos)
   }
 }
