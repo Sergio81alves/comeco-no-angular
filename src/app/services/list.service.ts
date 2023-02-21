@@ -24,9 +24,12 @@ export class ListService {
   }
 
   adiciona(animais: Animal[]){
-
+    return this.http.post(this.apiUrl, animais)
   }
 
+  criar(contato: any){
+   return this.http.post(this.apiUrl, contato)
+  }
   
 /*antes de usar essa função tem que importar funções do angular httpHeaders e httpClient */
   getAll(): Observable<Animal[]>{

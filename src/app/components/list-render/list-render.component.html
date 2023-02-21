@@ -20,11 +20,11 @@
     </ul>
     <h1> {{mostPreco}} </h1>
 
-    <form action="" method="post" #frm="ngForm" (ngSubmit)="criar(frm)">
-        <input type="number" [(ngModel)]="id" name="id" placeholder="Id">
-        <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome" required>
-        <input type="text" [(ngModel)]="tipo" name="tipo" placeholder="Tipo" required>
-        <input type="text" [(ngModel)]="age" name="age" placeholder="Age" required>
+    <form method="post" #frm="ngForm" (ngSubmit)="criar(frm)">
+        <input type="number" [(ngModel)]="contato.id" name="id" placeholder="Id">
+        <input type="text" [(ngModel)]="contato.nome" name="nome" placeholder="Nome" required>
+        <input type="text" [(ngModel)]="contato.tipo" name="tipo" placeholder="Tipo" required>
+        <input type="text" [(ngModel)]="contato.age" name="age" placeholder="Age" required>
         <button type="submit" [disabled]="frm.invalid">Enviar</button>
        
     </form>
