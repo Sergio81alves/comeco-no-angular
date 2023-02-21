@@ -69,4 +69,8 @@ export class ListRenderComponent implements OnInit {
   getProdutos(): void{
     this.listService.pegarTudo().subscribe((produtos) => this.produtos = produtos)
   }
+
+  criar(frm){
+    
+  }
 }
