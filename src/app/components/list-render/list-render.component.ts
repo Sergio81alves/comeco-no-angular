@@ -49,8 +49,7 @@ export class ListRenderComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.contato = {};
-    this.contatos = Array<any>;
+    
   }
   
 
@@ -74,19 +73,7 @@ export class ListRenderComponent implements OnInit {
     this.listService.pegarTudo().subscribe((produtos) => this.produtos = produtos)
   }
 
-  contatos = Array<any>;
-  contato: any;
   
-  criar(frm: FormGroup){
-    this.listService.criar(this.contato).subscribe((item) => {
-      this.items.push(this.items);
-
-      frm.reset
-    });
-  }
-  item(item: any) {
-    throw new Error('Method not implemented.');
-  }
   adiciona(animais: Animal[]){
    
   }
