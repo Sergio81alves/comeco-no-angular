@@ -10,6 +10,7 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./item-detail.component.css']
 })
 export class ItemDetailComponent implements OnInit {
+  
 // ? quer dizerpode vir ou não
 animal?: Animal;
   constructor(private listService: ListService, private route: ActivatedRoute) {

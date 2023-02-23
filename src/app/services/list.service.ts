@@ -37,7 +37,7 @@ export class ListService {
   }
 
   getItam(id: number): Observable<Animal>{
-    return this.http.get<Animal>(`${this.apiUrl} / ${id}`)
+    return this.http.get<Animal>(`${this.apiUrl}/${id}`)
   }
 
   pegarTudo(): Observable<Produtos[]>{

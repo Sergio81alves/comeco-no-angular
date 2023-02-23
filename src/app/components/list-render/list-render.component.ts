@@ -16,18 +16,7 @@ export class ListRenderComponent implements OnInit {
   animal?: Animal;
   produto?: Produtos;
 
-  id = parseFloat;
-  nome = '';
-  tipo = '';
-  age = '';
 
-
-  mostrarItem = "";
-  items = ['joão', 'pedro', 'victor'];
-
-  enviar(){
-    this.items.push(this.mostrarItem)
-  }
   constructor(private listService: ListService){
     //faco primeiro essa função depois chamo ela lá em baixo.
     //chamo ela no meu constructor para construir no momento do site
