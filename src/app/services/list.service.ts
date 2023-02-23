@@ -19,8 +19,8 @@ export class ListService {
     return this.http.delete<Animal>(`${this.apiUrl}/${id}`);
   }
 
-  excluir(produtos: Produtos[], produto: Produtos){
-    return produtos.filter((b) => produto.name !== b.name );
+  excluir(name: string){
+    return this.http.delete<Produtos>(`${this.urlApi}/${name}`);
   }
 
   adiciona(animais: Animal[]){

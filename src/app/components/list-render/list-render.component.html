@@ -2,7 +2,7 @@
     <ul>
         <li *ngFor="let animal of animais"> Nome: <a routerLink="/list/{{ animal.id }}"> {{animal.nome}} </a> -  tipo: {{animal.tipo}}
          <button (click)="showAge(animal)">Show age</button>
-         <button (click)="remopvendoAnimal(animal)" >Excluindo</button>
+         <button (click)="removendoAnimal(animal)" >Excluindo</button>
         </li>
     </ul>
     <h3>{{animalDetails}}</h3>
@@ -15,7 +15,7 @@
         <li *ngFor="let produto of produtos">
             Nome: {{produto.name}} - Quantidade: {{produto.ml}} - Qual tarja: {{produto.tarja}} - Valor {{produto.preco | currency: "BRL"}}
            <button (click)="showPreco(produto)">Show preço</button>
-           <button (click)="removendoProduto(produto)">Adicionar</button>
+           <button (click)="removendoProduto(produto)">Excluir</button>
         </li>
     </ul>
     <h1> {{mostPreco}} </h1>
