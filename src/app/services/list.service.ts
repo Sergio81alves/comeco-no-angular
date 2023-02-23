@@ -15,22 +15,19 @@ export class ListService {
   private urlApi = 'http://localhost:3000/produtos';
  
   constructor(private http: HttpClient) { }
-  remove(animais: Animal[], animal: Animal){
-    return animais.splice( animais.indexOf(animal))
+  remove(id: number){ //tenho que falar a entidade que estou deletando <Animal>
+    return this.http.delete<Animal>(`${this.apiUrl}/${id}`);
   }
 
   excluir(produtos: Produtos[], produto: Produtos){
-    return produtos.filter((b) => produto.name !== b.name )
+    return produtos.filter((b) => produto.name !== b.name );
   }
 
   adiciona(animais: Animal[]){
     return this.http.post(this.apiUrl, animais)
   }
 
-  criar(contato: any){
-   return this.http.post(this.apiUrl, contato)
-  }
-  
+ 
 /*antes de usar essa função tem que importar funções do angular httpHeaders e httpClient */
   getAll(): Observable<Animal[]>{
     return this.http.get<Animal[]>(this.apiUrl)

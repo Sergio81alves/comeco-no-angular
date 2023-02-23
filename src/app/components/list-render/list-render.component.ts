@@ -49,7 +49,9 @@ export class ListRenderComponent implements OnInit {
 
   remopvendoAnimal(animal: Animal){
     /*essa função recebe o animal, depois vai lá em lista serviço e usa a função de remover, que por sua vez só faz um filtro retornando os outros itens menos o selecionado */
-    this.animais = this.listService.remove(this.animais, animal)
+    
+    this.animais = this.animais.filter((a) => animal.nome !== a.nome);
+    this.listService.remove(animal.id).subscribe(); //o subscribe aqui é so para o angular falar que foi concretizado
   }
   //função que pega os animais do banco de dados
   getAnimals(): void{

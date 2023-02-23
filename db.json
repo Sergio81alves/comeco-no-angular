@@ -1,16 +1,54 @@
 {
-  "animais":  [
-    {"id": 1, "nome": "bob", "tipo": "Dog", "age": 22},
-    {"id": 2, "nome": "felipe", "tipo":"Bird", "age": 2},
-    {"id": 3, "nome":" check", "tipo": "Cat", "age": 3},
-    {"id": 4, "nome": "marcia", "tipo": "Dog", "age": 4}
+  "animais": [
+    {
+      "id": 1,
+      "nome": "bob",
+      "tipo": "Dog",
+      "age": 22
+    },
+    {
+      "id": 2,
+      "nome": "felipe",
+      "tipo": "Bird",
+      "age": 2
+    },
+    {
+      "id": 3,
+      "nome": " check",
+      "tipo": "Cat",
+      "age": 3
+    }
   ],
- "produtos": [
-    {"name": "Dipirona", "ml": "20ml", "tarja": "Branca", "preco": "15"},
-    {"name": "Novalgina", "ml": "15ml", "tarja": "Branca", "preco": "16"},
-    {"name": "Paracetamol", "ml": "25ml", "tarja": "Branca", "preco": "20"},
-    {"name": "Decadrom", "ml": "20ml", "tarja": "Preta", "preco": "45"},
-    {"name": "defratr", "ml": "10ml", "tarja": "vermelha", "preco": "100"}
+  "produtos": [
+    {
+      "name": "Dipirona",
+      "ml": "20ml",
+      "tarja": "Branca",
+      "preco": "15"
+    },
+    {
+      "name": "Novalgina",
+      "ml": "15ml",
+      "tarja": "Branca",
+      "preco": "16"
+    },
+    {
+      "name": "Paracetamol",
+      "ml": "25ml",
+      "tarja": "Branca",
+      "preco": "20"
+    },
+    {
+      "name": "Decadrom",
+      "ml": "20ml",
+      "tarja": "Preta",
+      "preco": "45"
+    },
+    {
+      "name": "defratr",
+      "ml": "10ml",
+      "tarja": "vermelha",
+      "preco": "100"
+    }
   ]
-
 }

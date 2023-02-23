@@ -10,7 +10,7 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./item-detail.component.css']
 })
 export class ItemDetailComponent implements OnInit {
-  
+
 // ? quer dizerpode vir ou não
 animal?: Animal;
   constructor(private listService: ListService, private route: ActivatedRoute) {
@@ -20,6 +20,7 @@ animal?: Animal;
   ngOnInit(): void {
   }
 
+  
   //apartir desse cara eu vou puxar o dado da rota
   getAnimal(){
     const id = Number(this.route.snapshot.paramMap.get('id'))
