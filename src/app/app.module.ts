@@ -19,6 +19,7 @@ import { TesteComponent } from './components/teste/teste.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayComponent } from './components/two-way/two-way.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { DetailProdutosComponent } from './components/detail-produtos/detail-produtos.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     TesteComponent,
     PipesComponent,
     TwoWayComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    DetailProdutosComponent
   ],
   imports: [
     BrowserModule,

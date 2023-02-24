@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailProdutosComponent } from './components/detail-produtos/detail-produtos.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: "eventos", component: EventosComponent},
   {path: "if", component: IfRenderComponent},
   {path: "sergio", component: SergioComponent},
+  {path: "produtos/:name", component: DetailProdutosComponent},
   
 ];
 

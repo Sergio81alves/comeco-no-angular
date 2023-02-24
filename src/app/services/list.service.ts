@@ -40,4 +40,8 @@ export class ListService {
   pegarTudo(): Observable<Produtos[]>{
     return this.http.get<Produtos[]>(this.urlApi)
   }
+
+  produtosget(name: string): Observable<Produtos>{
+    return this.http.get<Produtos>(`${this.urlApi}/${name}`)
+  }
 }
