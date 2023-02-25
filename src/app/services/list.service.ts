@@ -13,6 +13,7 @@ export class ListService {
   //private só fica acessivel na class, não fica acessivel no component, isso é uma boa pratica para url por exemplo
   private apiUrl = 'http://localhost:3000/animais';
   private urlApi = 'http://localhost:3000/produtos';
+  private url = 'http://localhost:3000';
  
   constructor(private http: HttpClient) { }
   remove(id: number){ //tenho que falar a entidade que estou deletando <Animal>
@@ -42,6 +43,6 @@ export class ListService {
   }
 
   produtosget(name: string): Observable<Produtos>{
-    return this.http.get<Produtos>(`${this.urlApi}/${name}`)
+    return this.http.get<Produtos>(`${this.url}/${name}`)
   }
 }
