@@ -1,36 +1,4 @@
 {
-  "animais": [
-    {
-      "id": 1,
-      "nome": "bob",
-      "tipo": "Dog",
-      "age": 22
-    },
-    {
-      "id": 2,
-      "nome": "felipe",
-      "tipo": "Bird",
-      "age": 2
-    },
-    {
-      "id": 3,
-      "nome": " check",
-      "tipo": "Cat",
-      "age": 3
-    },
-    {
-      "id": 52,
-      "nome": "Bruna",
-      "tipo": "Bird",
-      "age": 2
-    },
-    {
-      "id": 8,
-      "nome": "domitila",
-      "tipo": "Dog",
-      "age": 6
-    }
-  ],
   "produtos": [
     {
       "name": "Dipirona",
