@@ -1,6 +1,6 @@
 export interface Produtos{
     name: string; 
-    ml: string; 
+    ml: number; 
     tarja: string;
-    preco: string;
+    preco: number;
 }

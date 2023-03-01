@@ -34,33 +34,33 @@
   "produtos": [
     {
       "name": "Dipirona",
-      "ml": "20ml",
+      "ml": 20,
       "tarja": "Branca",
-      "preco": "15"
+      "preco": 15
     },
     {
       "name": "Novalgina",
-      "ml": "15ml",
+      "ml": 15,
       "tarja": "Branca",
-      "preco": "16"
+      "preco": 16
     },
     {
       "name": "Paracetamol",
-      "ml": "25ml",
+      "ml": 25,
       "tarja": "Branca",
-      "preco": "20"
+      "preco": 20
     },
     {
       "name": "Decadrom",
-      "ml": "20ml",
+      "ml": 20,
       "tarja": "Preta",
-      "preco": "45"
+      "preco": 45
     },
     {
       "name": "defratr",
-      "ml": "10ml",
+      "ml": 10,
       "tarja": "vermelha",
-      "preco": "100"
+      "preco": 100
     }
   ]
 }

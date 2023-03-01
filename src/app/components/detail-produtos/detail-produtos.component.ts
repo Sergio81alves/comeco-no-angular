@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLinkActive } from '@angular/router';
 import { Produtos } from 'src/app/Produtos';
 import { ListService } from 'src/app/services/list.service';
+import { Animal } from 'src/app/Animal';
 
 
 
@@ -14,15 +15,15 @@ export class DetailProdutosComponent implements OnInit {
 
   produtos?: Produtos;
   constructor(private listService: ListService, private route: ActivatedRoute) {
-    this.getprodutos() //faco ele aqui e chamo ele la em baixo
+    this.getProdutos() //faco ele aqui e chamo ele la em baixo
    }
 
   ngOnInit(): void {
   }
 
-  getprodutos(){
-    const name = String(this.route.snapshot.paramMap.get('name'))
-    this.listService.produtosget(name).subscribe((produtos) => (this.produtos = produtos))
+  getProdutos(){
+    const name = String(this.route.snapshot.paramMap.get("name"))
+    this.listService.produtosget(name).subscribe((produto) => (this.produtos = produto))
     
   }
 
